@@ -33,13 +33,13 @@ class XyloPhone extends StatefulWidget {
 
 class _XyloPhoneState extends State<XyloPhone> {
   @override
-
   late AudioPlayer player;
   @override
   void initState() {
     super.initState();
     player = AudioPlayer();
   }
+
   @override
   void dispose() {
     player.dispose();
@@ -57,8 +57,8 @@ class _XyloPhoneState extends State<XyloPhone> {
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () async {
-                await player.setAsset('wavs/note1.wav');
+              onPressed: () {
+                player.setAsset('wavs/note1.wav');
                 player.play();
                 print('Do');
               }),
@@ -71,8 +71,8 @@ class _XyloPhoneState extends State<XyloPhone> {
                     color: Colors.red,
                     borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () async {
-                await player.setAsset('wavs/note2.wav');
+              onPressed: () {
+                player.setAsset('wavs/note2.wav');
                 player.play();
                 print('Ré');
               }),
@@ -85,8 +85,8 @@ class _XyloPhoneState extends State<XyloPhone> {
                     color: Colors.orange,
                     borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () async {
-                await player.setAsset('wavs/note3.wav');
+              onPressed: () {
+                player.setAsset('wavs/note3.wav');
                 player.play();
                 print('Mi');
               }),
@@ -99,8 +99,8 @@ class _XyloPhoneState extends State<XyloPhone> {
                     color: Colors.yellow,
                     borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () async {
-                await player.setAsset('wavs/note4.wav');
+              onPressed: () {
+                player.setAsset('wavs/note4.wav');
                 player.play();
                 print('Fa');
               }),
@@ -113,8 +113,8 @@ class _XyloPhoneState extends State<XyloPhone> {
                     color: Colors.green,
                     borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () async {
-                await player.setAsset('wavs/note5.wav');
+              onPressed: () {
+                player.setAsset('wavs/note5.wav');
                 player.play();
                 print('Sol');
               }),
@@ -141,8 +141,8 @@ class _XyloPhoneState extends State<XyloPhone> {
                     color: Colors.purple,
                     borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () async {
-                await player.setAsset('wavs/note7.wav');
+              onPressed: () {
+                player.setAsset('wavs/note7.wav');
                 player.play();
                 print('Si');
               }),
