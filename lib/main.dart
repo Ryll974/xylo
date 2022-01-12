@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.black,
         appBar: AppBar(
           centerTitle: true,
           title: Text(
@@ -37,39 +36,67 @@ class _XyloPhoneState extends State<XyloPhone> {
     return Column(
       children: [
         Expanded(
-          child: Container (
-              color: Colors.white,
-          ),
+          child: TextButton(
+              child: Container(
+                color: Colors.white,
+              ),
+              onPressed: () {
+                print('Pressed');
+              }),
         ),
         Expanded(
-          child: Container (
-            color: Colors.blue,
-          ),
+          child: TextButton(
+              child: Container(
+                color: Colors.red,
+              ),
+              onPressed: () {
+                print('Pressed');
+              }),
         ),
         Expanded(
-          child: Container (
-            color: Colors.green,
-          ),
+          child: TextButton(
+              child: Container(
+                color: Colors.blue,
+              ),
+              onPressed: () {
+                print('Pressed');
+              }),
         ),
         Expanded(
-          child: Container (
-            color: Colors.yellow,
-          ),
+          child: TextButton(
+              child: Container(
+                color: Colors.purple,
+              ),
+              onPressed: () {
+                print('Pressed');
+              }),
         ),
         Expanded(
-          child: Container (
-            color: Colors.purple,
-          ),
+          child: TextButton(
+              child: Container(
+                color: Colors.yellow,
+              ),
+              onPressed: () {
+                print('Pressed');
+              }),
         ),
         Expanded(
-          child: Container (
-            color: Colors.grey,
-          ),
+          child: TextButton(
+              child: Container(
+                color: Colors.green,
+              ),
+              onPressed: () {
+                print('Pressed');
+              }),
         ),
         Expanded(
-          child: Container (
-            color: Colors.red,
-          ),
+          child: TextButton(
+              child: Container(
+                color: Colors.grey,
+              ),
+              onPressed: () {
+                print('Pressed');
+              }),
         ),
       ],
     );
