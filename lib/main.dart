@@ -32,6 +32,24 @@ class XyloPhone extends StatefulWidget {
 }
 
 class _XyloPhoneState extends State<XyloPhone> {
+
+  Widget XyloNote(Color? couleur,String fichier)
+  {
+    return Expanded(
+      child: TextButton(
+          child: Container(
+            margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
+            decoration: new BoxDecoration(
+                color: couleur,
+                borderRadius: BorderRadius.all(Radius.circular(12))),
+          ),
+          onPressed: () {
+            player.setAsset(fichier);
+            player.play();
+          }),
+    );
+  }
+
   @override
   late AudioPlayer player;
   @override
@@ -49,104 +67,13 @@ class _XyloPhoneState extends State<XyloPhone> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(
-          child: TextButton(
-              child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(12))),
-              ),
-              onPressed: () {
-                player.setAsset('wavs/note1.wav');
-                player.play();
-                print('Do');
-              }),
-        ),
-        Expanded(
-          child: TextButton(
-              child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.all(Radius.circular(12))),
-              ),
-              onPressed: () {
-                player.setAsset('wavs/note2.wav');
-                player.play();
-                print('Ré');
-              }),
-        ),
-        Expanded(
-          child: TextButton(
-              child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.all(Radius.circular(12))),
-              ),
-              onPressed: () {
-                player.setAsset('wavs/note3.wav');
-                player.play();
-                print('Mi');
-              }),
-        ),
-        Expanded(
-          child: TextButton(
-              child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(
-                    color: Colors.yellow,
-                    borderRadius: BorderRadius.all(Radius.circular(12))),
-              ),
-              onPressed: () {
-                player.setAsset('wavs/note4.wav');
-                player.play();
-                print('Fa');
-              }),
-        ),
-        Expanded(
-          child: TextButton(
-              child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.all(Radius.circular(12))),
-              ),
-              onPressed: () {
-                player.setAsset('wavs/note5.wav');
-                player.play();
-                print('Sol');
-              }),
-        ),
-        Expanded(
-          child: TextButton(
-              child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.all(Radius.circular(12))),
-              ),
-              onPressed: () async {
-                await player.setAsset('wavs/note6.wav');
-                player.play();
-                print('La');
-              }),
-        ),
-        Expanded(
-          child: TextButton(
-              child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(
-                    color: Colors.purple,
-                    borderRadius: BorderRadius.all(Radius.circular(12))),
-              ),
-              onPressed: () {
-                player.setAsset('wavs/note7.wav');
-                player.play();
-                print('Si');
-              }),
-        ),
+        XyloNote(Colors.white,'wavs/note1.wav'),
+        XyloNote(Colors.red,'wavs/note2.wav'),
+        XyloNote(Colors.orange,'wavs/note3.wav'),
+        XyloNote(Colors.yellow,'wavs/note4.wav'),
+        XyloNote(Colors.green,'wavs/note5.wav'),
+        XyloNote(Colors.blue,'wavs/note6.wav'),
+        XyloNote(Colors.purple,'wavs/note7.wav'),
       ],
     );
   }
