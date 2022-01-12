@@ -33,6 +33,19 @@ class XyloPhone extends StatefulWidget {
 
 class _XyloPhoneState extends State<XyloPhone> {
   @override
+
+  late AudioPlayer player;
+  @override
+  void initState() {
+    super.initState();
+    player = AudioPlayer();
+  }
+  @override
+  void dispose() {
+    player.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -40,70 +53,98 @@ class _XyloPhoneState extends State<XyloPhone> {
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () {
-                print('Pressed note 1');
+              onPressed: () async {
+                await player.setAsset('wavs/note1.wav');
+                player.play();
+                print('Do');
               }),
         ),
         Expanded(
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.red,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () {
-                print('Pressed note 2');
+              onPressed: () async {
+                await player.setAsset('wavs/note2.wav');
+                player.play();
+                print('Ré');
               }),
         ),
         Expanded(
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () {
-                print('Pressed note 3');
+              onPressed: () async {
+                await player.setAsset('wavs/note3.wav');
+                player.play();
+                print('Mi');
               }),
         ),
         Expanded(
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.yellow,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () {
-                print('Pressed note 4');
+              onPressed: () async {
+                await player.setAsset('wavs/note4.wav');
+                player.play();
+                print('Fa');
               }),
         ),
         Expanded(
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.green,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () {
-                print('Pressed note 5');
+              onPressed: () async {
+                await player.setAsset('wavs/note5.wav');
+                player.play();
+                print('Sol');
               }),
         ),
         Expanded(
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () {
-                print('Pressed note 6');
+              onPressed: () async {
+                await player.setAsset('wavs/note6.wav');
+                player.play();
+                print('La');
               }),
         ),
         Expanded(
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.purple,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(
+                    color: Colors.purple,
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-              onPressed: () {
-                print('Pressed note 7');
+              onPressed: () async {
+                await player.setAsset('wavs/note7.wav');
+                player.play();
+                print('Si');
               }),
         ),
       ],
