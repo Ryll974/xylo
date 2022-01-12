@@ -60,7 +60,7 @@ class _XyloPhoneState extends State<XyloPhone> {
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
               onPressed: () {
                 print('Pressed note 3');
@@ -70,7 +70,7 @@ class _XyloPhoneState extends State<XyloPhone> {
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.purple,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(color: Colors.yellow,borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
               onPressed: () {
                 print('Pressed note 4');
@@ -80,7 +80,7 @@ class _XyloPhoneState extends State<XyloPhone> {
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.yellow,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(color: Colors.green,borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
               onPressed: () {
                 print('Pressed note 5');
@@ -90,7 +90,7 @@ class _XyloPhoneState extends State<XyloPhone> {
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.green,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
               onPressed: () {
                 print('Pressed note 6');
@@ -100,7 +100,7 @@ class _XyloPhoneState extends State<XyloPhone> {
           child: TextButton(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                decoration: new BoxDecoration(color: Colors.grey,borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: new BoxDecoration(color: Colors.purple,borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
               onPressed: () {
                 print('Pressed note 7');
